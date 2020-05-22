@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import { FormattedMessage, FormattedHTMLMessage, injectIntl } from 'react-intl';
 import styled from 'styled-components';
 import shuffle from 'lodash/shuffle';
 import bowser from 'bowser';
@@ -10,7 +9,6 @@ import close from '../assets/ic-browser-close.svg';
 import wrong from '../assets/ic-wrong-answer.svg';
 import mission from '../assets/ic-mission-large.svg';
 import { clickableStyle } from './styles';
-import messages from './messages';
 import {
   BLOCTO_BLACK,
   BLOCTO_GRAY,
@@ -189,11 +187,11 @@ const MissionSVG = styled(SVG)`
 
 class ArticleQuiz extends PureComponent {
   props: {
-    intl: any,
     questions: any,
     isActive: Boolean,
     onClose: Function,
     onSuccess: Function,
+    messages: any,
   }
 
   constructor(props) {
@@ -280,15 +278,15 @@ class ArticleQuiz extends PureComponent {
   }
 
   handleConfirmQuit = () => {
-    const { intl } = this.props;
+    const { messages } = this.props;
 
-    if (confirm(intl.formatMessage(messages.confirmQuitQuiz))) {
+    if (confirm(messages.confirmQuitQuiz)) {
       this.handleClose();
     }
   }
 
   render() {
-    const { questions, isActive, onSuccess } = this.props;
+    const { questions, isActive, onSuccess, messages } = this.props;
     const { index, shuffledAnswers, selected, hasMarker } = this.state;
 
     return (
@@ -326,10 +324,10 @@ class ArticleQuiz extends PureComponent {
           <MissionSVG src={mission} />
 
           <Title centered>
-            <FormattedMessage {...messages.congrats} />
+            {messages.congrats}
 
             <Subtitle>
-              <FormattedHTMLMessage {...messages.congratsDescription} />
+            {messages.congratsDescription}
             </Subtitle>
           </Title>
         </QuestionWrapper>
@@ -338,7 +336,7 @@ class ArticleQuiz extends PureComponent {
           isActive={selected.findIndex((item, i) => !item || hasMarker[i]) === -1}
           onClick={index === questions.size ? onSuccess : this.handleSubmit}
         >
-          <FormattedMessage {...(index === questions.size ? messages.claimReward : messages.submit)} />
+          {index === questions.size ? messages.claimReward : messages.submit}
         </QuestButton>
 
         <Bar
