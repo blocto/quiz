@@ -1,4 +1,5 @@
 import { css } from 'styled-components';
+import { COLOR_DIM_GRAY } from '../colors';
 
 export const clickableStyle = css`
   cursor: pointer;
@@ -14,7 +15,7 @@ export const clickableStyle = css`
     right: 0;
     top: 0;
     bottom: 0;
-    background-color: ${props => props.theme.COLOR_DIM_GRAY};
+    background-color: ${COLOR_DIM_GRAY};
     pointer-events: none;
     opacity: 0;
     transition: .1s opacity;

@@ -2,6 +2,12 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { clickableStyle, unclickableStyle } from '../styles';
 import Spinner from './Spinner';
+import {
+  BLOCTO_BLACK,
+  BLOCTO_GRAY,
+  BLOCTO_BLUE,
+  COLOR_WHITE,
+} from '../colors';
 
 const StyledButton = styled.button`
   position: relative;
@@ -10,11 +16,11 @@ const StyledButton = styled.button`
   user-select: none;
   font-size: 12px;
   outline: 0;
-  color: ${props => props.theme.COLOR_WHITE};
-  background-color: ${props => props.theme.COLOR_BLOCTO_BLUE};
+  color: ${COLOR_WHITE};
+  background-color: ${BLOCTO_BLUE};
 
   &:after {
-    background-color: ${props => props.theme.COLOR_BLACK};
+    background-color: ${BLOCTO_BLACK};
   }
 
   ${props => ((props.isDisabled || props.isProcessing) ? unclickableStyle : clickableStyle)}

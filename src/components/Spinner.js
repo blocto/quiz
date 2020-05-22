@@ -1,5 +1,6 @@
 import React from 'react';
 import styled, { keyframes } from 'styled-components';
+import { COLOR_WHITE } from '../colors';
 
 const bounce = keyframes`
   0%, 80%, 100% {
@@ -27,7 +28,7 @@ export const Ball = styled.div`
   width: 9px;
   height: 9px;
   margin: 2px;
-  background-color: ${props => props.theme.COLOR_BLOCTO_BLUE};
+  background-color: ${COLOR_WHITE};
   border-radius: 100%;
   display: inline-block;
   animation: ${bounce} 1.4s infinite ease-in-out both;
