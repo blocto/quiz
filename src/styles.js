@@ -1,5 +1,5 @@
 import { css } from 'styled-components';
-import { COLOR_DIM_GRAY } from '../colors';
+import { COLOR_DIM_GRAY } from './colors';
 
 export const clickableStyle = css`
   cursor: pointer;
