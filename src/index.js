@@ -359,4 +359,4 @@ class ArticleQuiz extends PureComponent {
   }
 }
 
-export default injectIntl(ArticleQuiz);
+export default ArticleQuiz;
