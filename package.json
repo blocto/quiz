@@ -14,7 +14,12 @@
     "name": "portto"
   },
   "license": "MIT",
-  "main": "src/index.js",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run build"
+  },
   "dependencies": {
     "bowser": "^2.9.0",
     "lodash": "^4.17.15",
@@ -23,6 +28,12 @@
     "styled-components": "^3.3.2"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.6",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-flow": "^7.9.0",
+    "@babel/preset-react": "^7.9.4",
     "@portto/eslint-config-portto": "^0.0.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.0.0",
