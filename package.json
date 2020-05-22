@@ -1,0 +1,16 @@
+{
+  "name": "@portto/quiz",
+  "version": "0.0.1",
+  "description": "Quiz component for Blocto blockchain guide",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/portto/quiz.git"
+  },
+  "engines": {
+    "npm": ">=5",
+    "node": ">=8"
+  },
+  "author": "portto",
+  "license": "MIT",
+  "main": "src/index.js"
+}
