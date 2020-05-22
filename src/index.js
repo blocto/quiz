@@ -327,7 +327,7 @@ class ArticleQuiz extends PureComponent {
             {messages.congrats}
 
             <Subtitle>
-            {messages.congratsDescription}
+              <span dangerouslySetInnerHTML={{ __html: messages.congratsDescription }} />
             </Subtitle>
           </Title>
         </QuestionWrapper>
