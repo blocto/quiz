@@ -37,7 +37,8 @@
     "babel-plugin-polished": "^1.1.0",
     "eslint": "^7.0.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.20.0"
+    "eslint-plugin-react": "^7.20.0",
+    "immutable": "^4.0.0-rc.12"
   },
   "peerDependencies": {
     "react": "^16.8.6",

@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import styled from 'styled-components';
 import shuffle from 'lodash/shuffle';
 import bowser from 'bowser';
+import { List } from 'immutable';
 
 import SVG from './components/SVG';
 import Button from './components/Button';
@@ -193,6 +194,14 @@ class ArticleQuiz extends PureComponent {
     onSuccess: Function,
     messages: any,
   }
+
+  defaultProps = {
+    questions: List(),
+    isActive: false,
+    onClose: () => {},
+    onSuccess: () => {},
+    messages: {},
+  };
 
   constructor(props) {
     super(props);
