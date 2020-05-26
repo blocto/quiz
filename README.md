@@ -1,4 +1,4 @@
-# Quiz Component ![npm](https://img.shields.io/npm/v/@portto/quiz/latest)
+# Quiz Component [![npm](https://img.shields.io/npm/v/@portto/quiz/latest)](https://www.npmjs.com/package/@portto/quix)
 Quiz component for blockchain guide
 
 ## Setup
